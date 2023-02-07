@@ -1,38 +1,151 @@
-.App {
+.app{
+  background:linear-gradient(45deg,#11998e,#38ef7d) ;
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.password_container{
+  padding: 20px;
+  background-color: aliceblue;
+  width: 60%;
+  height: 80%;
+  display: flex;
+}
+.form-check-input{
+  min-width:20px;
+  min-height: 20px;
+}
+.text-center{
   text-align: center;
 }
+.block_tools{
+  width: 60%;
+  height:100%;
+  overflow-y: scroll;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.block_info{
+  width: 40%;
+  height:100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.text_password_container{
+  overflow: scroll;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.block_info::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(26, 24, 47, 0.15);
+  border-radius: 5px;
+}
+
+.block_info::-webkit-scrollbar-thumb {
+  background: #1A182F;
+  border-radius: 5px;
+}
+.block_tools::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(26, 24, 47, 0.15);
+  border-radius: 5px;
+}
+
+.block_tools::-webkit-scrollbar-thumb {
+  background: #1A182F;
+  border-radius: 5px;
+}
+.text_password_container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: rgba(26, 24, 47, 0.15);
+  border-radius: 5px;
+}
+
+.text_password_container::-webkit-scrollbar-thumb {
+  background: #1A182F;
+  border-radius: 5px;
+}
+
+
+
+.span-text{
+  font-size: large;
+  font-weight: 900;
+}
+
+.textInfo{
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+}
+.textInfo2{
+  font-size: 15px;
+  font-weight: 900;
+  font-style: italic;
+
+}
+.textLevel{
+  font-size: large;
+  font-style:oblique;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+.bg-gray{
+  background:linear-gradient(45deg,#11998e,#38ef7d) ;
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+.image_lavel{
+  width: 100%;
+  height: 280px;
+}
+@keyframes gradient{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width:1100px){
+  .app{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .password_container{
+    width: 100%;
+    height: 100%;
+
+  }
+}
+@media (max-width:600px){
+  .password_container{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+  }
+  .block_tools{
+    width: 100%;
+    background-color: aliceblue;
+  }
+  .block_info{
+    margin-top:10px;
+    border-top:3px solid black;
+    width: 100%;
+    background-color: aliceblue;
+
   }
 }
